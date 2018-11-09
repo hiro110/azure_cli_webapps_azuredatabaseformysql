@@ -1,0 +1,16 @@
+#!/bin/bash
+
+########################################
+#
+# *** Set Global Config ***
+# *** Create Resource Group ***
+#
+########################################
+
+. ./conf.txt
+
+# *** Set Global Config ***
+az configure --defaults location=$LACATION group=$RESOURCE_GROUP_NAME
+
+# *** Create Resource Group ***
+az group create --name $RESOURCE_GROUP_NAME --location $LACATION
